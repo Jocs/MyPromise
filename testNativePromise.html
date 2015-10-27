@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var promise = new Promise(function(resolve, reject, notify) {
+			setTimeout(function(){
+				reject('error');
+			}, 1000);
+		});
+		promise
+		.then(function(data){
+			console.log(data);
+			return data + '222';
+		})
+		.catch(function(data){
+			console.log('dd')
+			console.log(data);
+		});
+	</script>
+</body>
+</html>
