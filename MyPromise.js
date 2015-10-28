@@ -6,14 +6,14 @@ var MyPromise = (function() {
 	 * [self 把this对象保存在self变量中，便于闭包引用和bind方法调用]
 	 * @type {[Object]}
 	 */
-	 var self = this;
-	 this.state = 'pending';
-	 this.data = undefined;
-	 this.progress = undefined;
+	 var self          = this;
+	 this.state        = 'pending';
+	 this.data         = undefined;
+	 this.progress     = undefined;
 	 this.settledValue = undefined;
-	 this.successFn = [];
-	 this.errorFn = [];
-	 this.progressFn = [];
+	 this.successFn    = [];
+	 this.errorFn      = [];
+	 this.progressFn   = [];
 	/**
 	 * [该方法用来resolve一个promise，使得promise对象的状态变为resolved，同时如果resolve函数
 	 * 传入参数，把参数值保存到promise对象的data属性上]
@@ -140,17 +140,10 @@ var MyPromise = (function() {
  */
  MyPromise.length = 1;
 
-
-
-
-
-
-
-
-
-
-
-
+MyPromise.all = function(){};
+MyPromise.race = function(){};
+MyPromise.resolve = function(){};
+MyPromise.reject = function(){};
 
 
  return MyPromise;
